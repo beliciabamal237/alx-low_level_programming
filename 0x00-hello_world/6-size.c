@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *  main - Entry point
+ *  main - prints the size of various
  *
  * the use function printf
  *
