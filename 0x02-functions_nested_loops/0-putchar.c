@@ -10,16 +10,14 @@
 
 int main(void)
 {
-	char message[] = "_putchar";
-	int count = 0;
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 
-
-	while (message[count] != '\0')
-	{
-		_putchar(message[count]);
-		count++;
-	}
-	_putchar('\n');
 	return (0);
 }
-
