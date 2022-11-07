@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
 /**
  * *_strdup - a function that returns a pointer to a newly allocated
  * @str: string given as a parameter
@@ -9,12 +8,19 @@
  */
 char *_strdup(char *str)
 {
-	char *dst;
+	char *strout;
+	unsigned int i, j;
 
-	dst = malloc(strlen(str) + 1);
-
-	if (dst == NULL)
+	if (str == NULL)
 		return (NULL);
-	strcpy(dst, str);
-	return (dst);
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	strout = (char *)malloc(sizeof(char) * (i + 1));
+
+	if (strout == NULL)
+		return (NULL);
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
+	return (strout);
 }
