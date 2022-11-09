@@ -3,6 +3,8 @@
 #include <stdlib.h>
 /**
  * main - prints the number of arguments passed into it
+ * @argc: int.
+ * @argv: char.
  *
  * Return: always 0
  */
