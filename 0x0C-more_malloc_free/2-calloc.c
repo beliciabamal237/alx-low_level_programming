@@ -1,44 +1,31 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
- * string_nconcat - function that concatenates two strings.
+ * _calloc - function that allocates memory for an array, using malloc
  *
- * @s1: This is the first input string
- * @s2: This is the second input string
- * @n: This is the limit to copy the second string to the first string
+ * @nmemb: This is the length to allocate in the memory
+ * @size: This is the size of casting to save
  *
- * Return: This is the string joined
+ * Return: Pointer to the allocated memory.
+ *         If nmemb or size is 0, then _calloc returns NULL
+ *         If malloc fails, then _calloc returns NULL
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int a, b;
-	char *newString;
+	char *call;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	for (a = 0; s1[a] != '\0'; a++)
-	{
-	}
-	for (b = 0; s2[b] != '\0'; b++)
-	{
-	}
-	if (n > b)
-		n = b;
-	newString = malloc(((a + n) + 1));
-	if (newString == NULL)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	for (a = 0; s1[a] != '\0'; a++)
+	b = (nmemb * size);
+	call = malloc(b);
+	if (call == NULL)
+		return (NULL);
+	for (a = 0; a < b; a++)
 	{
-		newString[a] = s1[a];
+		call[a] = 0;
 	}
-	for (b = 0; b != n; b++)
-	{
-		newString[a] = s2[b];
-		a++;
-	}
-	newString[a] = '\0';
-	return (newString);
+	return (call);
 }
