@@ -9,7 +9,7 @@ int _putchar(char c);
  * @owner: the dog's owner
  * @age: the dog's age
  */
-struct Dog
+struct dog
 {
 	char *name;
 	char *owner;
