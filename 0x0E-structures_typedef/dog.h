@@ -8,6 +8,7 @@ int _putchar(char c);
  * @name: the dog'sname
  * @owner: the dog's owner
  * @age: the dog's age
+ * description: name,age and owner of the dog
  */
 struct dog
 {
